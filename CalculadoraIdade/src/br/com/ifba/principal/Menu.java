@@ -21,7 +21,7 @@ public class Menu {
                 case 0 -> System.out.println("\n\n === Menu finalizado === \n\n");
                 case 1, 2 -> System.out.println("\n\n Atividade já enviada \n\n");
                 case 3 -> // Chamando a main da interfaceIdade
-                    br.com.ifba.atividade03.view.interfaceIdade.main(args);
+                    br.com.ifba.atividade03.view.CalculadoraDeIdade.main(args);
                 default -> System.out.println("\n\n Erro: Selecione uma opcao valida \n\n");
             }
             
