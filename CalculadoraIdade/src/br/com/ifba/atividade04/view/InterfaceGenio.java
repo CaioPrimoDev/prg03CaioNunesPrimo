@@ -23,19 +23,17 @@ public class InterfaceGenio extends javax.swing.JFrame {
         
         // Torna o Spinner não editavel, evitando erros por entrada invalida
         ((JSpinner.DefaultEditor) spnValor.getEditor()).getTextField().setEditable(false);
-        
-        // TOrna o Text Area não editável, evitando erros por entrada invalida
-        txtBalao.setEditable(false);
 
+        lblBalao.setForeground(UIManager.getColor("Label.foreground")); // Cor igual ao padrão de JLabel
+        lblBalao.setFont(new Font("SansSerif", Font.BOLD, 12)); // Fonte maior e em negrito
 
-        txtBalao.setForeground(UIManager.getColor("Label.foreground")); // Cor igual ao padrão de JLabel
-        txtBalao.setFont(new Font("SansSerif", Font.BOLD, 12)); // Fonte maior e em negrito
-
-        txtBalao.setText(
-           "\n           Vou pensar em um número\n" +
-           "\n                    entre 1 a 5\n" +
-           "\n                 Adivinhe qual é!"
-        );
+        lblBalao.setText(
+                       "<html>" +
+                       "Vou pensar em um número<br>" +
+                       "entre 1 a 5<br>" +
+                       "Adivinhe qual é!" +
+                       "</html>"
+                );
 
 
                 
@@ -50,13 +48,24 @@ public class InterfaceGenio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtBalao = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         btnPapite = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         spnValor = new javax.swing.JSpinner();
         jLabel4 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtBalao = new javax.swing.JTextArea();
+        lblBalao = new javax.swing.JLabel();
+
+        txtBalao.setEditable(false);
+        txtBalao.setColumns(20);
+        txtBalao.setLineWrap(true);
+        txtBalao.setRows(5);
+        txtBalao.setWrapStyleWord(true);
+        txtBalao.setBorder(null);
+        txtBalao.setFocusable(false);
+        txtBalao.setOpaque(false);
+        jScrollPane1.setViewportView(txtBalao);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -80,13 +89,8 @@ public class InterfaceGenio extends javax.swing.JFrame {
         getContentPane().add(spnValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 70, 30));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/atividade04/images/balaoVazado.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, -70, 360, 420));
-
-        txtBalao.setColumns(20);
-        txtBalao.setRows(5);
-        jScrollPane1.setViewportView(txtBalao);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 230, 130));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 360, 260));
+        getContentPane().add(lblBalao, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 230, 130));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -100,18 +104,22 @@ public class InterfaceGenio extends javax.swing.JFrame {
         
         if(numero == aleatorio){
             // Fonte maior e em negrito
-           txtBalao.setFont(new Font("SansSerif", Font.BOLD, 12));
-           txtBalao.setText("\n\n       ACERTOU!!!");
+           lblBalao.setFont(new Font("SansSerif", Font.BOLD, 12));
+           lblBalao.setText("\n\n       ACERTOU!!!");
         } else {
-          txtBalao.setText("\n\n       ERROU!!!\n\nEu pensei no valor " + aleatorio);
+          lblBalao.setText("\n\n       ERROU!!!\n\nEu pensei no valor " + aleatorio);
         }
         
         
         // Cria o Timer que espera 3 segundos antes de "reiniciar"
         Timer reiniciarBalao = new Timer(3000, (e) -> {
-              txtBalao.setText("\n     Vou pensar em um número\n"
-                   + "\n            entre 1 a 5\n"
-                   + "\n            Adivinhe qual é!");
+                lblBalao.setText(
+                       "<html>" +
+                       "Vou pensar em um número<br>" +
+                       "entre 1 a 5<br>" +
+                       "Adivinhe qual é!" +
+                       "</html>"
+                );
         });
         reiniciarBalao.setRepeats(false); // Executa só uma vez
         reiniciarBalao.start();
@@ -161,6 +169,7 @@ public class InterfaceGenio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblBalao;
     private javax.swing.JSpinner spnValor;
     private javax.swing.JTextArea txtBalao;
     // End of variables declaration//GEN-END:variables
