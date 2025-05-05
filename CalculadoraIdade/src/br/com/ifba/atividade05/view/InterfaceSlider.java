@@ -45,7 +45,9 @@ public class InterfaceSlider extends javax.swing.JFrame {
         fimSlider = new javax.swing.JSlider();
         passoSlider = new javax.swing.JSlider();
         btnContar = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        txtInicio = new javax.swing.JTextField();
+        txtFim = new javax.swing.JTextField();
+        txtPasso = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -55,7 +57,7 @@ public class InterfaceSlider extends javax.swing.JFrame {
         txtResposta.setRows(5);
         jScrollPane1.setViewportView(txtResposta);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 6, 109, 280));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 109, 270));
 
         jLabel1.setText("INICIO");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 40, 20));
@@ -69,26 +71,37 @@ public class InterfaceSlider extends javax.swing.JFrame {
 
         inicioSlider.setMajorTickSpacing(1);
         inicioSlider.setMaximum(10);
-        inicioSlider.setMinimum(1);
-        inicioSlider.setPaintLabels(true);
         inicioSlider.setPaintTicks(true);
         inicioSlider.setValue(1);
+        inicioSlider.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                inicioSliderStateChanged(evt);
+            }
+        });
         getContentPane().add(inicioSlider, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, 50));
 
         fimSlider.setMajorTickSpacing(1);
         fimSlider.setMaximum(15);
         fimSlider.setMinimum(6);
-        fimSlider.setPaintLabels(true);
         fimSlider.setPaintTicks(true);
         fimSlider.setValue(6);
+        fimSlider.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                fimSliderStateChanged(evt);
+            }
+        });
         getContentPane().add(fimSlider, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, -1, 60));
 
         passoSlider.setMajorTickSpacing(1);
         passoSlider.setMaximum(5);
         passoSlider.setMinimum(1);
-        passoSlider.setPaintLabels(true);
         passoSlider.setPaintTicks(true);
         passoSlider.setValue(1);
+        passoSlider.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                passoSliderStateChanged(evt);
+            }
+        });
         getContentPane().add(passoSlider, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 200, 50));
 
         btnContar.setText("CONTAR");
@@ -99,8 +112,22 @@ public class InterfaceSlider extends javax.swing.JFrame {
         });
         getContentPane().add(btnContar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 80, 30));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/atividade05/images/professor.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, 190, 210));
+        txtInicio.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtInicio.setText("0");
+        txtInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtInicioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 30, -1));
+
+        txtFim.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFim.setText("0");
+        getContentPane().add(txtFim, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 30, -1));
+
+        txtPasso.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPasso.setText("0");
+        getContentPane().add(txtPasso, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 30, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -121,6 +148,34 @@ for (int i = inicio; i <= fim; i += passo) {
         
         
     }//GEN-LAST:event_btnContarActionPerformed
+
+    private void txtInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInicioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtInicioActionPerformed
+
+    private void inicioSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_inicioSliderStateChanged
+        // Obtém o valor atual do slider
+        int valor = inicioSlider.getValue();
+        
+        // Converte o valor para String e define na caixa de texto
+        txtInicio.setText(String.valueOf(valor));
+    }//GEN-LAST:event_inicioSliderStateChanged
+
+    private void fimSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_fimSliderStateChanged
+        // Obtém o valor atual do slider
+        int valor = fimSlider.getValue();
+        
+        // Converte o valor para String e define na caixa de texto
+        txtFim.setText(String.valueOf(valor));
+    }//GEN-LAST:event_fimSliderStateChanged
+
+    private void passoSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_passoSliderStateChanged
+        // Obtém o valor atual do slider
+        int valor = passoSlider.getValue();
+        
+        // Converte o valor para String e define na caixa de texto
+        txtPasso.setText(String.valueOf(valor));        
+    }//GEN-LAST:event_passoSliderStateChanged
 
     /**
      * @param args the command line arguments
@@ -164,9 +219,11 @@ for (int i = inicio; i <= fim; i += passo) {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSlider passoSlider;
+    private javax.swing.JTextField txtFim;
+    private javax.swing.JTextField txtInicio;
+    private javax.swing.JTextField txtPasso;
     private javax.swing.JTextArea txtResposta;
     // End of variables declaration//GEN-END:variables
 }
