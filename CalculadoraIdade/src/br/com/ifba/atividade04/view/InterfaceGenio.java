@@ -54,8 +54,10 @@ public class InterfaceGenio extends javax.swing.JFrame {
         btnPapite = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         spnValor = new javax.swing.JSpinner();
-        jLabel4 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         lblBalao = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         txtBalao.setEditable(false);
         txtBalao.setColumns(20);
@@ -88,9 +90,19 @@ public class InterfaceGenio extends javax.swing.JFrame {
         spnValor.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
         getContentPane().add(spnValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 70, 30));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/atividade04/images/balaoVazado.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 360, 260));
-        getContentPane().add(lblBalao, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 230, 130));
+        jPanel1.setOpaque(false);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblBalao.setText("lblBalao");
+        jPanel1.add(lblBalao, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 130));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 50, 30));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 200, 130));
+
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifba/atividade04/images/balaoFala.png"))); // NOI18N
+        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, 250, 220));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -165,9 +177,11 @@ public class InterfaceGenio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnPapite;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblBalao;
     private javax.swing.JSpinner spnValor;
