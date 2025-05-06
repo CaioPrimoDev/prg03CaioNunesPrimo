@@ -17,6 +17,7 @@ public class Menu {
             System.out.println("3- Calculadora de Idade");
             System.out.println("4- Jogo do Gênio");
             System.out.println("5- Repeticao com slider");
+            System.out.println("6- Tela com vetores");
             System.out.print("\n> ");
             escolha = scanner.nextInt();
         
@@ -31,6 +32,8 @@ public class Menu {
                 case 4 -> br.com.ifba.atividade04.view.InterfaceGenio.main(args);
                 
                 case 5-> br.com.ifba.atividade05.view.InterfaceSlider.main(args);
+                
+                case 6-> br.com.ifba.atividade06.view.TelaVetor.main(args);
 
                 default -> System.out.println("\n\n Erro: Selecione uma opcao valida \n\n");
             }
