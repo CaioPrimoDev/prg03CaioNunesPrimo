@@ -50,6 +50,7 @@ public class InterfaceSlider extends javax.swing.JFrame {
         txtPasso = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Tela Slider");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtResposta.setColumns(20);

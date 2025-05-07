@@ -18,6 +18,7 @@ public class Menu {
             System.out.println("4- Jogo do Gênio");
             System.out.println("5- Repeticao com slider");
             System.out.println("6- Tela com vetores");
+            System.out.println("7- Tela com Fatorial");
             System.out.print("\n> ");
             escolha = scanner.nextInt();
         
@@ -34,6 +35,8 @@ public class Menu {
                 case 5-> br.com.ifba.atividade05.view.InterfaceSlider.main(args);
                 
                 case 6-> br.com.ifba.atividade06.view.TelaVetor.main(args);
+                
+                case 7-> br.com.ifba.atividade07.view.TelaFatorial.main(args);
 
                 default -> System.out.println("\n\n Erro: Selecione uma opcao valida \n\n");
             }

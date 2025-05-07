@@ -70,6 +70,7 @@ public class TelaVetor extends javax.swing.JFrame {
         btnDecrescente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Tela Vetor");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lstVetor.setModel(new javax.swing.AbstractListModel<String>() {
@@ -152,6 +153,9 @@ public class TelaVetor extends javax.swing.JFrame {
         // Limpando a lista antes de reimprimir os valores
         listaModel.clear();  // Limpa todos os elementos da JList
         
+        // Resetao label de vetor
+        lblVetor.setText("[" + "0" + "]");
+        
         // Preenche a lista com formato "[índice] -> valor"
         for (int i = 0; i < valores.length; i++) {
             listaModel.addElement("[" + i + "] -> " + valores[i]);
@@ -165,6 +169,9 @@ public class TelaVetor extends javax.swing.JFrame {
         
         // Limpando a lista antes de reimprimir os valores
         listaModel.clear();  // Limpa todos os elementos da JList
+        
+        // Resetao label de vetor
+        lblVetor.setText("[" + "0" + "]");
         
         // Preenche a lista com formato "[índice] -> valor"
         for (int i = 0; i < valores.length; i++) {
