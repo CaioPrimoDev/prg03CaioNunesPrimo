@@ -1,5 +1,6 @@
 package br.com.ifba.principal;
 
+import br.com.ifba.util.Input;
 import java.util.Scanner;
 
 public class Menu {
@@ -19,6 +20,7 @@ public class Menu {
             System.out.println("5- Repeticao com slider");
             System.out.println("6- Tela com vetores");
             System.out.println("7- Tela com Fatorial");
+            System.out.println("8- Conta do Banco");
             System.out.print("\n> ");
             escolha = scanner.nextInt();
         
@@ -37,10 +39,14 @@ public class Menu {
                 case 6-> br.com.ifba.atividade06.view.TelaVetor.main(args);
                 
                 case 7-> br.com.ifba.atividade07.view.TelaFatorial.main(args);
+                
+                case 8-> br.com.ifba.atividade08.usuarioBanco.main(args);
 
                 default -> System.out.println("\n\n Erro: Selecione uma opcao valida \n\n");
             }
             
         } while(escolha != 0);
+        
+        Input.fecharScanner();
     }
 }
