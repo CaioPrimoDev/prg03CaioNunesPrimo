@@ -5,14 +5,14 @@
 package br.com.ifba.atividade08;
 
 import br.com.ifba.util.Input;
-import java.util.Scanner;
-import static br.com.ifba.util.Input.SCANNER;
 
 
 /**
  *
  * @author User
  */
+
+
 public class ContaBanco {
     
         // Constantes que alteram a cor da saida de texto
@@ -36,11 +36,7 @@ public class ContaBanco {
         this.tipo = tipo;
         this.dono = dono;
         this.saldo = saldo;
-        this.status = status;
-        
-        System.out.print("\nInforme o nome do Usuario\n> ");
-        this.dono = Input.SCANNER.nextLine();
-        
+        this.status = status;     
     }
     
 

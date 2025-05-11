@@ -29,10 +29,9 @@ public class Menu {
                 
                 case 1, 2 -> System.out.println("\n\n Atividade já enviada \n\n");
                 
-                case 3 -> // Chamando a main da InterfaceIdade
-                    br.com.ifba.atividade03.view.InterfaceIdade.main(args);
+                case 3-> br.com.ifba.atividade03.view.InterfaceIdade.main(args);
                     
-                case 4 -> br.com.ifba.atividade04.view.InterfaceGenio.main(args);
+                case 4-> br.com.ifba.atividade04.view.InterfaceGenio.main(args);
                 
                 case 5-> br.com.ifba.atividade05.view.InterfaceSlider.main(args);
                 
