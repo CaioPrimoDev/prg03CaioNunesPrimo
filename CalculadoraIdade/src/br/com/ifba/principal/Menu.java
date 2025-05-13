@@ -21,6 +21,7 @@ public class Menu {
             System.out.println("6- Tela com vetores");
             System.out.println("7- Tela com Fatorial");
             System.out.println("8- Conta do Banco");
+            System.out.println("9- Pagamento");
             System.out.print("\n> ");
             escolha = scanner.nextInt();
         
@@ -40,6 +41,8 @@ public class Menu {
                 case 7-> br.com.ifba.atividade07.view.TelaFatorial.main(args);
                 
                 case 8-> br.com.ifba.atividade08.usuarioBanco.main(args);
+                
+                case 9-> br.com.ifba.atividade09.view.MenuPagamentos.main(args);
 
                 default -> System.out.println("\n\n Erro: Selecione uma opcao valida \n\n");
             }
