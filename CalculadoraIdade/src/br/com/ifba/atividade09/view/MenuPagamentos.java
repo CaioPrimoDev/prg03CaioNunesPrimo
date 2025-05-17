@@ -44,6 +44,7 @@ public class MenuPagamentos extends javax.swing.JFrame {
         txtValorFinal = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -65,7 +66,7 @@ public class MenuPagamentos extends javax.swing.JFrame {
         getContentPane().add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 200, 30));
 
         jLabel3.setText("Valor da compra:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 100, 30));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 100, 30));
 
         txtValor.setText("0");
         txtValor.addActionListener(new java.awt.event.ActionListener() {
@@ -93,6 +94,9 @@ public class MenuPagamentos extends javax.swing.JFrame {
         jLabel5.setText("R$");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 20, 30));
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, 40, 30));
+
+        jLabel7.setText("R$");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 20, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -192,6 +196,7 @@ public class MenuPagamentos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtValor;
     private javax.swing.JTextField txtValorFinal;
