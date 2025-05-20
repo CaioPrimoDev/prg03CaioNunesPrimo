@@ -49,11 +49,9 @@ public class Main {
         
         int i = 0;
         for(String nome : nomes) {
-            System.out.println(Colors.VERDE + nome + Colors.RESET);
-            System.out.println("Area: " + formas[i].calcularArea());
-            if(i > 2) {
-            System.out.println("Volume: " + formas[i].calcularVolume());
-            }
+            System.out.println(Colors.VERDE + "= " + nome + " =" + Colors.RESET);
+            formas[i].calcularArea();
+            formas[i].calcularVolume();
             i++;
         }
     }

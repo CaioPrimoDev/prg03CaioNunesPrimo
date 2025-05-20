@@ -18,6 +18,7 @@ public abstract class Forma2D extends Forma {
         this.largura = largura;
     }
     
-    public abstract double calcularArea();
+    public abstract void calcularArea();
+    public abstract void calcularVolume();
     
 }

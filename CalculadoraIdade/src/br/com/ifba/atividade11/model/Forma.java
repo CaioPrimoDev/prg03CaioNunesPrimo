@@ -10,7 +10,7 @@ package br.com.ifba.atividade11.model;
  */
 public abstract class Forma {
     
-    public abstract double calcularArea();
-    public abstract double calcularVolume();
+    public abstract void calcularArea();
+    public abstract void calcularVolume();
     
 }

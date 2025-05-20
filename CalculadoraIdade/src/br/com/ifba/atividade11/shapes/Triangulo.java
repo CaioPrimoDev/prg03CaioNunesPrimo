@@ -17,12 +17,12 @@ public class Triangulo extends Forma2D {
     }
     
     @Override
-    public double calcularArea() {
-        return ((this.altura * this.largura) / 2);
+    public void calcularArea() {
+        System.out.println("Area: " + ((this.altura * this.largura) / 2));
     } 
 
     @Override
-    public double calcularVolume() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void calcularVolume() {
+        System.out.println("Volume: " + 0);
     }
 }

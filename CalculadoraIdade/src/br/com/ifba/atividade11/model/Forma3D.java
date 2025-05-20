@@ -20,7 +20,7 @@ public abstract class Forma3D extends Forma {
         this.comprimento = comprimento;
     }
     
-        public abstract double calcularArea();
-        public abstract double calcularVolume();
+        public abstract void calcularArea();
+        public abstract void calcularVolume();
     
 }

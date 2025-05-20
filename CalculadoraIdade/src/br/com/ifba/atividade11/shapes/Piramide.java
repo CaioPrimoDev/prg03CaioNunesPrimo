@@ -22,13 +22,13 @@ public class Piramide extends Forma3D {
     }
 
     @Override
-    public double calcularArea() {
-        return (Math.pow(largura, 2) + (2 * largura * apotema));
+    public void calcularArea() {
+        System.out.println("Area: " + (Math.pow(largura, 2) + (2 * largura * apotema)));
     }
 
     @Override
-    public double calcularVolume() {
-        return ((Math.pow(largura, 2) * altura) / 3);
+    public void calcularVolume() {
+        System.out.println("Volume: " + ((Math.pow(largura, 2) * altura) / 3));
     }
     
     

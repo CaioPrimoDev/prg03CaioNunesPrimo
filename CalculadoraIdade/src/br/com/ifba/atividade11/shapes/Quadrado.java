@@ -19,12 +19,12 @@ public class Quadrado extends Forma2D {
     }
     
     @Override   
-    public double calcularArea() {
-        return Math.pow(largura, 2);
+    public void calcularArea() {
+        System.out.println("Area: " + Math.pow(largura, 2));
     }  
 
     @Override
-    public double calcularVolume() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void calcularVolume() {
+        System.out.println("Volume: " + 0);
     }
 }

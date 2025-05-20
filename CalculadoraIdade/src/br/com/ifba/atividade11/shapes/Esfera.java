@@ -20,12 +20,12 @@ public class Esfera extends Forma3D {
     }
 
     @Override
-    public double calcularArea() {
-        return 4 * Math.PI * Math.pow(this.raio, 2);
+    public void calcularArea() {
+        System.out.println("Area: " + (4 * Math.PI * Math.pow(this.raio, 2)));
     }
 
     @Override
-    public double calcularVolume() {
-        return (4 * Math.PI * Math.pow(this.raio, 3)) / 3;
+    public void calcularVolume() {
+        System.out.println("Volume: " + (4 * Math.PI * Math.pow(this.raio, 3)) / 3);
     }  
 }
